@@ -24,6 +24,7 @@ using MahApps.Metro.Controls.Dialogs;
 using Hearthstone_Deck_Tracker.Utility.Themes;
 using Hearthstone_Deck_Tracker.Utility.Updating;
 using WPFLocalizeExtension.Engine;
+using Hearthstone_Deck_Tracker.Utility.Broadcast;
 
 #endregion
 
@@ -146,6 +147,7 @@ namespace Hearthstone_Deck_Tracker
 				Overlay.ShowRestartRequiredWarning();
 			}
 			LogWatcherManger.Start(Game).Forget();
+			GameStateBroadcaster.Run();
 
 			RemoteConfig.Instance.Load();
 			HotKeyManager.Load();

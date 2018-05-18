@@ -37,7 +37,6 @@ namespace Hearthstone_Deck_Tracker.LogReader
 			StartsWithFilters = new[] {"PowerTaskList.DebugPrintPower", "GameState."},
 			ContainsFilters = new[] {"Begin Spectating", "Start Spectator", "End Spectator"}
 		};
-
 		public static LogWatcherInfo RachelleLogWatcherInfo => new LogWatcherInfo {Name = "Rachelle"};
 		public static LogWatcherInfo ArenaLogWatcherInfo => new LogWatcherInfo {Name = "Arena", Reset = false};
 		public static LogWatcherInfo LoadingScreenLogWatcherInfo => new LogWatcherInfo {Name = "LoadingScreen", StartsWithFilters = new[] {"LoadingScreen.OnSceneLoaded", "Gameplay" } };
